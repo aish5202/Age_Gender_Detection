@@ -8,7 +8,11 @@ from datetime import datetime
 # MODEL PATHS
 # ====================================================
 
-MODEL_PATH = "models/"
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+MODEL_PATH = os.path.join(BASE_DIR, "models/")
 
 FACE_PROTO = MODEL_PATH + "opencv_face_detector.pbtxt"
 FACE_MODEL = MODEL_PATH + "opencv_face_detector_uint8.pb"
